@@ -6,6 +6,7 @@
 Welcome to RagnarokPy3.2's documentation!
 =========================================
 
+If you see this, it worked!
    
 .. automodule:: Ragnarok
 	:members:
