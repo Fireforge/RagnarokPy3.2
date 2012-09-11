@@ -6,6 +6,7 @@ rm sphinx -r
 git add -A
 git commit -a -m "Generated gh-pages"
 git push origin gh-pages
+git checkout master
 
 echo "Done!"
 pause
