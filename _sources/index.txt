@@ -6,10 +6,16 @@
 Welcome to RagnarokPy3.2's documentation!
 =========================================
 
-If you see this, it worked!
-   
+Ragnarok.py Documentation
+-------------------------
 .. automodule:: Ragnarok
 	:members:
+	:undoc-members:
+	:show-inheritance:
+
+Members that need documentation!
+--------------------------------
+
 
 
 

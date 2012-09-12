@@ -48,11 +48,18 @@
             
   <div class="section" id="welcome-to-ragnarokpy3-2-s-documentation">
 <h1>Welcome to RagnarokPy3.2&#8217;s documentation!<a class="headerlink" href="#welcome-to-ragnarokpy3-2-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>If you see this, it worked!</p>
-<span class="target" id="module-Ragnarok"></span><dl class="class">
+<div class="section" id="module-Ragnarok">
+<span id="ragnarok-py-documentation"></span><h2>Ragnarok.py Documentation<a class="headerlink" href="#module-Ragnarok" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
 <dt id="Ragnarok.AABoundingBox">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">AABoundingBox</tt><big>(</big><em>collision_function=None</em>, <em>tag=''</em>, <em>parent=None</em><big>)</big><a class="headerlink" href="#Ragnarok.AABoundingBox" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents an axis aligned bounding box.</p>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.CollidableObj" title="Ragnarok.CollidableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.CollidableObj</span></tt></a></p>
+<p>Represents an axis aligned bounding box.</p>
+<dl class="method">
+<dt id="Ragnarok.AABoundingBox.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em><big>)</big><a class="headerlink" href="#Ragnarok.AABoundingBox.draw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="Ragnarok.AABoundingBox.is_colliding">
 <tt class="descname">is_colliding</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#Ragnarok.AABoundingBox.is_colliding" title="Permalink to this definition">¶</a></dt>
@@ -62,9 +69,52 @@
 </dd></dl>
 
 <dl class="class">
+<dt id="Ragnarok.Animation">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Animation</tt><big>(</big><em>sprite_sheet</em>, <em>frame_rate=24</em>, <em>end_frame=0</em><big>)</big><a class="headerlink" href="#Ragnarok.Animation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.Animation.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em><big>)</big><a class="headerlink" href="#Ragnarok.Animation.draw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Animation.frame_rate">
+<tt class="descname">frame_rate</tt><a class="headerlink" href="#Ragnarok.Animation.frame_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Animation.get_frame_rate">
+<tt class="descname">get_frame_rate</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Animation.get_frame_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Animation.increment_frame">
+<tt class="descname">increment_frame</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Animation.increment_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increment a frame of the animation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Animation.set_frame_rate">
+<tt class="descname">set_frame_rate</tt><big>(</big><em>value</em><big>)</big><a class="headerlink" href="#Ragnarok.Animation.set_frame_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Animation.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.Animation.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="Ragnarok.AnimationList">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">AnimationList</tt><a class="headerlink" href="#Ragnarok.AnimationList" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents an animation that is made up of seperate images rather than a single spritesheet.</p>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<p>Represents an animation that is made up of seperate images rather than a single spritesheet.</p>
+<dl class="attribute">
+<dt id="Ragnarok.AnimationList.coords">
+<tt class="descname">coords</tt><a class="headerlink" href="#Ragnarok.AnimationList.coords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="Ragnarok.AnimationList.copy">
 <tt class="descname">copy</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.AnimationList.copy" title="Permalink to this definition">¶</a></dt>
@@ -72,10 +122,30 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="Ragnarok.AnimationList.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em><big>)</big><a class="headerlink" href="#Ragnarok.AnimationList.draw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.AnimationList.frame_rate">
+<tt class="descname">frame_rate</tt><a class="headerlink" href="#Ragnarok.AnimationList.frame_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.AnimationList.get_coords">
+<tt class="descname">get_coords</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.AnimationList.get_coords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="Ragnarok.AnimationList.get_currently_display_image">
 <tt class="descname">get_currently_display_image</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.AnimationList.get_currently_display_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the image that is currently displaying in this animation.</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.AnimationList.get_frame_rate">
+<tt class="descname">get_frame_rate</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.AnimationList.get_frame_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="Ragnarok.AnimationList.get_hflip">
@@ -132,6 +202,11 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="Ragnarok.AnimationList.set_frame_rate">
+<tt class="descname">set_frame_rate</tt><big>(</big><em>value</em><big>)</big><a class="headerlink" href="#Ragnarok.AnimationList.set_frame_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="Ragnarok.AnimationList.set_hflip">
 <tt class="descname">set_hflip</tt><big>(</big><em>val</em><big>)</big><a class="headerlink" href="#Ragnarok.AnimationList.set_hflip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flip all the images in the animation list horizontally.</p>
@@ -143,6 +218,11 @@
 <dd><p>Flip all the images in the animation list vertically.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="Ragnarok.AnimationList.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.AnimationList.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="Ragnarok.AnimationList.v_flip">
 <tt class="descname">v_flip</tt><a class="headerlink" href="#Ragnarok.AnimationList.v_flip" title="Permalink to this definition">¶</a></dt>
@@ -152,15 +232,86 @@
 </dd></dl>
 
 <dl class="class">
+<dt id="Ragnarok.BoundingCircle">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">BoundingCircle</tt><big>(</big><em>coords=&lt;Ragnarok.Vector2 object at 0x0000000002843E80&gt;</em>, <em>radius=0.0</em>, <em>collision_response=None</em>, <em>tag=''</em><big>)</big><a class="headerlink" href="#Ragnarok.BoundingCircle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.CollidableObj" title="Ragnarok.CollidableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.CollidableObj</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.BoundingCircle.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em><big>)</big><a class="headerlink" href="#Ragnarok.BoundingCircle.draw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.BoundingCircle.is_colliding">
+<tt class="descname">is_colliding</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#Ragnarok.BoundingCircle.is_colliding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if two circles are colliding.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.Camera">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Camera</tt><a class="headerlink" href="#Ragnarok.Camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.UpdatableObj" title="Ragnarok.UpdatableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.UpdatableObj</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.Camera.Reset">
+<tt class="descname">Reset</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Camera.Reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the camera back to its defaults.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Camera.check_bounds">
+<tt class="descname">check_bounds</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Camera.check_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make sure the camera is not outside if its legal range.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Camera.get_cam_bounds">
+<tt class="descname">get_cam_bounds</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Camera.get_cam_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the bounds of the camera in x, y, xMax, and yMax format.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Camera.get_movement_delta">
+<tt class="descname">get_movement_delta</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Camera.get_movement_delta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the amount the camera has moved since get_movement_delta was last called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Camera.get_world_pos">
+<tt class="descname">get_world_pos</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Camera.get_world_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the position of the camera in world coordinates.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Camera.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.Camera.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Camera.update_view_bounds">
+<tt class="descname">update_view_bounds</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Camera.update_view_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the camera&#8217;s view bounds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="Ragnarok.CameraUpdater">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">CameraUpdater</tt><a class="headerlink" href="#Ragnarok.CameraUpdater" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a class that updates the camera.</p>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.UpdatableObj" title="Ragnarok.UpdatableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.UpdatableObj</span></tt></a></p>
+<p>Provides a class that updates the camera.</p>
+<dl class="method">
+<dt id="Ragnarok.CameraUpdater.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em>, <em>camera</em>, <em>desiredPan</em><big>)</big><a class="headerlink" href="#Ragnarok.CameraUpdater.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="Ragnarok.CollidableObj">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">CollidableObj</tt><big>(</big><em>collision_function=None</em>, <em>tag=''</em>, <em>parent=None</em><big>)</big><a class="headerlink" href="#Ragnarok.CollidableObj" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an abstract base class for collidable objects.</p>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<p>Provides an abstract base class for collidable objects.</p>
 <dl class="method">
 <dt id="Ragnarok.CollidableObj.collision_response">
 <tt class="descname">collision_response</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#Ragnarok.CollidableObj.collision_response" title="Permalink to this definition">¶</a></dt>
@@ -174,17 +325,28 @@ collision_function(self, other) is called when this method is executed.</p>
 <dd><p>Render the bounds of this collision ojbect onto the specified surface.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="Ragnarok.CollidableObj.is_colliding">
+<tt class="descname">is_colliding</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#Ragnarok.CollidableObj.is_colliding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="Ragnarok.CollisionManager">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">CollisionManager</tt><a class="headerlink" href="#Ragnarok.CollisionManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the collisions between all Collidable Objects.</p>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<p>Handles the collisions between all Collidable Objects.</p>
 <dl class="staticmethod">
 <dt id="Ragnarok.CollisionManager.add_object">
 <em class="property">static </em><tt class="descname">add_object</tt><big>(</big><em>collision_object</em><big>)</big><a class="headerlink" href="#Ragnarok.CollisionManager.add_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a collision object to the Manager</p>
 </dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.CollisionManager.collidable_objects">
+<tt class="descname">collidable_objects</tt><em class="property"> = []</em><a class="headerlink" href="#Ragnarok.CollisionManager.collidable_objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="Ragnarok.CollisionManager.draw">
@@ -231,12 +393,23 @@ at least for now.</p>
 <p>Checks everything against everything and handles all collision reactions.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="Ragnarok.CollisionManager.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.CollisionManager.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="Ragnarok.DrawableObj">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">DrawableObj</tt><big>(</big><em>update_order=0</em>, <em>draw_order=0</em><big>)</big><a class="headerlink" href="#Ragnarok.DrawableObj" title="Permalink to this definition">¶</a></dt>
-<dd><p>An object that represents something that can be drawn.</p>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.UpdatableObj" title="Ragnarok.UpdatableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.UpdatableObj</span></tt></a></p>
+<p>An object that represents something that can be drawn.</p>
+<dl class="method">
+<dt id="Ragnarok.DrawableObj.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>render_surface</em><big>)</big><a class="headerlink" href="#Ragnarok.DrawableObj.draw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="Ragnarok.DrawableObj.hide">
 <tt class="descname">hide</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.DrawableObj.hide" title="Permalink to this definition">¶</a></dt>
@@ -258,9 +431,242 @@ at least for now.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="Ragnarok.GUIButton">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">GUIButton</tt><a class="headerlink" href="#Ragnarok.GUIButton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.GUIButton.clicked_action">
+<tt class="descname">clicked_action</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.GUIButton.clicked_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>ClickedAction is the function that executes when the player clicks the button.
+Override this in the inherited class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.GUIButton.draw_debug">
+<tt class="descname">draw_debug</tt><big>(</big><em>surface</em>, <em>color=(0</em>, <em>255</em>, <em>0)</em><big>)</big><a class="headerlink" href="#Ragnarok.GUIButton.draw_debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.GUIButton.roll_away_action">
+<tt class="descname">roll_away_action</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.GUIButton.roll_away_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>rollAwayAction is the function that executes when the player moves the mouse (or key) away from the button.
+Override this in the inherited class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.GUIButton.roll_over_action">
+<tt class="descname">roll_over_action</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.GUIButton.roll_over_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>rollOverAction is the function that executes when the player moves the mouse (or key) over the button.
+Override this in the inherited class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.GUIButton.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.GUIButton.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.GUIMenu">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">GUIMenu</tt><a class="headerlink" href="#Ragnarok.GUIMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.GUIMenu.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em><big>)</big><a class="headerlink" href="#Ragnarok.GUIMenu.draw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.GUIMenu.move_down">
+<tt class="descname">move_down</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.GUIMenu.move_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to select the button under the currently selected one.
+If a button is not there, wrap down to the top of the menu and select the first button.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.GUIMenu.move_up">
+<tt class="descname">move_up</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.GUIMenu.move_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to select the button above the currently selected one.
+If a button is not there, wrap down to the bottom of the menu and select the last button.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.GUIMenu.set_keyboard_focus">
+<tt class="descname">set_keyboard_focus</tt><big>(</big><em>move_up</em>, <em>move_down</em>, <em>select</em><big>)</big><a class="headerlink" href="#Ragnarok.GUIMenu.set_keyboard_focus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the keyboard as the object that controls the menu.
+move_up is from the pygame.KEYS enum that defines what button causes the menu selection to move up.
+move_down is from the pygame.KEYS enum that defines what button causes the menu selection to move down.
+select is from the pygame.KEYS enum that defines what button causes the button to be selected.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.GUIMenu.set_mouse_focus">
+<tt class="descname">set_mouse_focus</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.GUIMenu.set_mouse_focus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the mouse as the object that controls the menu.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.GUIMenu.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.GUIMenu.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.KeyState">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">KeyState</tt><a class="headerlink" href="#Ragnarok.KeyState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dl class="method">
+<dt id="Ragnarok.KeyState.copy">
+<tt class="descname">copy</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.KeyState.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.KeyState.query_state">
+<tt class="descname">query_state</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#Ragnarok.KeyState.query_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query the state of a key. True if the key is down, false if it is up.
+key is a pygame key.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.Keyboard">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Keyboard</tt><a class="headerlink" href="#Ragnarok.Keyboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.UpdatableObj" title="Ragnarok.UpdatableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.UpdatableObj</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.Keyboard.is_any_clicked">
+<tt class="descname">is_any_clicked</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Keyboard.is_any_clicked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is any button clicked?</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Keyboard.is_any_down">
+<tt class="descname">is_any_down</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Keyboard.is_any_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is any button depressed?</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Keyboard.is_clicked">
+<tt class="descname">is_clicked</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#Ragnarok.Keyboard.is_clicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Keyboard.is_down">
+<tt class="descname">is_down</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#Ragnarok.Keyboard.is_down" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Keyboard.is_up">
+<tt class="descname">is_up</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#Ragnarok.Keyboard.is_up" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Keyboard.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.Keyboard.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.Matrix4">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Matrix4</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dl class="staticmethod">
+<dt id="Ragnarok.Matrix4.build_rotation">
+<em class="property">static </em><tt class="descname">build_rotation</tt><big>(</big><em>vec3</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.build_rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a rotation matrix.
+vec3 is a Vector3 defining the axis about which to rotate the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Matrix4.get_col">
+<tt class="descname">get_col</tt><big>(</big><em>col</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.get_col" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Matrix4.get_row">
+<tt class="descname">get_row</tt><big>(</big><em>row</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.get_row" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Matrix4.identity">
+<em class="property">static </em><tt class="descname">identity</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.identity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and return an identity matrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Matrix4.inverse_as_orghogonal">
+<tt class="descname">inverse_as_orghogonal</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.inverse_as_orghogonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the inverse of this matrix, assuming this matrix is orthogonal.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Matrix4.is_identity">
+<tt class="descname">is_identity</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.is_identity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if this matrix is an identity matrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Matrix4.is_orthogonal">
+<tt class="descname">is_orthogonal</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.is_orthogonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if this matrix is orthogonal.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Matrix4.scale">
+<em class="property">static </em><tt class="descname">scale</tt><big>(</big><em>scaleAmt</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a scale matrix.
+scaleAmt is a Vector3 defining the x, y, and z scale values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Matrix4.set_col">
+<tt class="descname">set_col</tt><big>(</big><em>col</em>, <em>vec4</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.set_col" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Matrix4.set_row">
+<tt class="descname">set_row</tt><big>(</big><em>row</em>, <em>vec4</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.set_row" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Matrix4.translate">
+<em class="property">static </em><tt class="descname">translate</tt><big>(</big><em>translationAmt</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.translate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a translation matrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Matrix4.transpose">
+<tt class="descname">transpose</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.transpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a transpose of this matrix.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Matrix4.x_rotate">
+<em class="property">static </em><tt class="descname">x_rotate</tt><big>(</big><em>rotationAmt</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.x_rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a matrix that rotates around the x axis.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Matrix4.y_rotate">
+<em class="property">static </em><tt class="descname">y_rotate</tt><big>(</big><em>rotationAmt</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.y_rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a matrix that rotates around the y axis.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Matrix4.z_rotate">
+<em class="property">static </em><tt class="descname">z_rotate</tt><big>(</big><em>rotationAmt</em><big>)</big><a class="headerlink" href="#Ragnarok.Matrix4.z_rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a matrix that rotates around the z axis.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="Ragnarok.Mouse">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Mouse</tt><a class="headerlink" href="#Ragnarok.Mouse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Wraps around Pygame&#8217;s Mouse module to provide some more information to the user, such as what buttons were pressed on the previous frame.</p>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.UpdatableObj" title="Ragnarok.UpdatableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.UpdatableObj</span></tt></a></p>
+<p>Wraps around Pygame&#8217;s Mouse module to provide some more information to the user, such as what buttons were pressed on the previous frame.</p>
 <dl class="method">
 <dt id="Ragnarok.Mouse.is_clicked">
 <tt class="descname">is_clicked</tt><big>(</big><em>MouseStateType</em><big>)</big><a class="headerlink" href="#Ragnarok.Mouse.is_clicked" title="Permalink to this definition">¶</a></dt>
@@ -280,12 +686,18 @@ MouseStateType is the button to query. Values found under StateTypes.py</p>
 <dd><p>Check to see if a button is up.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="Ragnarok.Mouse.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.Mouse.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="Ragnarok.MouseState">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">MouseState</tt><a class="headerlink" href="#Ragnarok.MouseState" title="Permalink to this definition">¶</a></dt>
-<dd><p>A structure that contains the states of our mouse buttons.</p>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>A structure that contains the states of our mouse buttons.</p>
 <dl class="method">
 <dt id="Ragnarok.MouseState.copy">
 <tt class="descname">copy</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.MouseState.copy" title="Permalink to this definition">¶</a></dt>
@@ -302,15 +714,67 @@ True if a button is pressed, false otherwise.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="Ragnarok.Particle">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Particle</tt><big>(</big><em>image_path=''</em>, <em>color_start=(255</em>, <em>255</em>, <em>255)</em>, <em>color_end=(255</em>, <em>255</em>, <em>255)</em>, <em>rotation_range=(0</em>, <em>0)</em>, <em>rotation_speed=1.0</em>, <em>start_scale=&lt;Ragnarok.Vector2 object at 0x00000000028431D0&gt;</em>, <em>end_scale=&lt;Ragnarok.Vector2 object at 0x0000000002843160&gt;</em>, <em>lifetime=1000.0</em><big>)</big><a class="headerlink" href="#Ragnarok.Particle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.Sprite" title="Ragnarok.Sprite"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.Sprite</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.Particle.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em><big>)</big><a class="headerlink" href="#Ragnarok.Particle.draw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Particle.initalize">
+<tt class="descname">initalize</tt><big>(</big><em>physics_dta</em><big>)</big><a class="headerlink" href="#Ragnarok.Particle.initalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepare our particle for use.
+physics_dta describes the velocity, coordinates, and acceleration of the particle.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Particle.is_living">
+<tt class="descname">is_living</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Particle.is_living" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the particle instance still living?</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Particle.update">
+<tt class="descname">update</tt><big>(</big><em>gametime</em><big>)</big><a class="headerlink" href="#Ragnarok.Particle.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.ParticleEmitter">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">ParticleEmitter</tt><big>(</big><em>coords=&lt;Ragnarok.Vector2 object at 0x00000000028437F0&gt;</em>, <em>particle_type=None</em>, <em>lifetime=1000.0</em>, <em>emit_rate=1000.0</em>, <em>direction_range=(0</em>, <em>0)</em>, <em>particle_speed=1</em>, <em>max_particles=1000</em><big>)</big><a class="headerlink" href="#Ragnarok.ParticleEmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.ParticleEmitter.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em><big>)</big><a class="headerlink" href="#Ragnarok.ParticleEmitter.draw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.ParticleEmitter.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.ParticleEmitter.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="Ragnarok.PhysicsObj">
-<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">PhysicsObj</tt><big>(</big><em>coords=&lt;Ragnarok.Vector2 object at 0x0000000004996940&gt;</em>, <em>acceleration=&lt;Ragnarok.Vector2 object at 0x00000000049969B0&gt;</em>, <em>velocity=&lt;Ragnarok.Vector2 object at 0x00000000049969E8&gt;</em><big>)</big><a class="headerlink" href="#Ragnarok.PhysicsObj" title="Permalink to this definition">¶</a></dt>
-<dd><p>A class with basic physics implemented.</p>
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">PhysicsObj</tt><big>(</big><em>coords=&lt;Ragnarok.Vector2 object at 0x0000000002843CC0&gt;</em>, <em>acceleration=&lt;Ragnarok.Vector2 object at 0x0000000002843D30&gt;</em>, <em>velocity=&lt;Ragnarok.Vector2 object at 0x0000000002843D68&gt;</em><big>)</big><a class="headerlink" href="#Ragnarok.PhysicsObj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.UpdatableObj" title="Ragnarok.UpdatableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.UpdatableObj</span></tt></a></p>
+<p>A class with basic physics implemented.</p>
+<dl class="method">
+<dt id="Ragnarok.PhysicsObj.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.PhysicsObj.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="Ragnarok.Pool">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Pool</tt><big>(</big><em>object_count=0</em>, <em>init_function=None</em><big>)</big><a class="headerlink" href="#Ragnarok.Pool" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a pool of reusable objects. Reduces memory allocations due to new objects being constantly generated (such as in bullets being fired, etc.)</p>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Create a pool of reusable objects. Reduces memory allocations due to new objects being constantly generated (such as in bullets being fired, etc.)</p>
 <dl class="method">
 <dt id="Ragnarok.Pool.request_object">
 <tt class="descname">request_object</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Pool.request_object" title="Permalink to this definition">¶</a></dt>
@@ -326,10 +790,357 @@ True if a button is pressed, false otherwise.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="Ragnarok.Ragnarok">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Ragnarok</tt><big>(</big><em>preferred_backbuffer_size=(-1</em>, <em>-1)</em>, <em>window_name='Ragnarok Game'</em><big>)</big><a class="headerlink" href="#Ragnarok.Ragnarok" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dl class="method">
+<dt id="Ragnarok.Ragnarok.exit">
+<tt class="descname">exit</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Ragnarok.exit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exit the game</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Ragnarok.get_world">
+<em class="property">static </em><tt class="descname">get_world</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Ragnarok.get_world" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Ragnarok.run">
+<tt class="descname">run</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Ragnarok.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the game loop</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Ragnarok.world">
+<tt class="descname">world</tt><em class="property"> = None</em><a class="headerlink" href="#Ragnarok.Ragnarok.world" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.Ray">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Ray</tt><big>(</big><em>origin=&lt;Ragnarok.Vector3 object at 0x0000000002835E48&gt;</em>, <em>direction=&lt;Ragnarok.Vector3 object at 0x0000000002835E10&gt;</em><big>)</big><a class="headerlink" href="#Ragnarok.Ray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dl class="method">
+<dt id="Ragnarok.Ray.get_point">
+<tt class="descname">get_point</tt><big>(</big><em>scalar_val</em><big>)</big><a class="headerlink" href="#Ragnarok.Ray.get_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a point along the ray.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.SpringCameraUpdater">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">SpringCameraUpdater</tt><a class="headerlink" href="#Ragnarok.SpringCameraUpdater" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.CameraUpdater" title="Ragnarok.CameraUpdater"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.CameraUpdater</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.SpringCameraUpdater.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em>, <em>camera</em><big>)</big><a class="headerlink" href="#Ragnarok.SpringCameraUpdater.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.Sprite">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Sprite</tt><big>(</big><em>update_order=0</em>, <em>draw_order=0</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.Sprite.apply_texture">
+<tt class="descname">apply_texture</tt><big>(</big><em>image</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.apply_texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Place a preexisting texture as the sprite&#8217;s texture.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.center_origin">
+<tt class="descname">center_origin</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.center_origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the origin to the center of the image.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>render_surface</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw the image to the specified surface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.get_hflip">
+<tt class="descname">get_hflip</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.get_hflip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.get_origin">
+<tt class="descname">get_origin</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.get_origin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.get_rotation">
+<tt class="descname">get_rotation</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.get_rotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.get_scale">
+<tt class="descname">get_scale</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.get_scale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.get_vflip">
+<tt class="descname">get_vflip</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.get_vflip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Sprite.h_flip">
+<tt class="descname">h_flip</tt><a class="headerlink" href="#Ragnarok.Sprite.h_flip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.is_visible_to_camera">
+<tt class="descname">is_visible_to_camera</tt><big>(</big><em>camera</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.is_visible_to_camera" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.load_texture">
+<tt class="descname">load_texture</tt><big>(</big><em>file_path</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.load_texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate our sprite&#8217;s surface by loading the specified image from disk. Note that this automatically centers the origin.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Sprite.origin">
+<tt class="descname">origin</tt><a class="headerlink" href="#Ragnarok.Sprite.origin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Sprite.rotation">
+<tt class="descname">rotation</tt><a class="headerlink" href="#Ragnarok.Sprite.rotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Sprite.scale">
+<tt class="descname">scale</tt><a class="headerlink" href="#Ragnarok.Sprite.scale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.scale_to">
+<tt class="descname">scale_to</tt><big>(</big><em>width_height=&lt;Ragnarok.Vector2 object at 0x00000000028435C0&gt;</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.scale_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale the texture to the specfied width and height.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.set_hflip">
+<tt class="descname">set_hflip</tt><big>(</big><em>val</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.set_hflip" title="Permalink to this definition">¶</a></dt>
+<dd><p>val is True or False that determines if we should horizontally flip the surface or not.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.set_origin">
+<tt class="descname">set_origin</tt><big>(</big><em>orig</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.set_origin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.set_rotation">
+<tt class="descname">set_rotation</tt><big>(</big><em>degrees</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.set_rotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.set_scale">
+<tt class="descname">set_scale</tt><big>(</big><em>scale_amt</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.set_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale the texture.
+scale_amt is a Vector2 whose values are between 0 and 1, where 1 is the full texture, and 0 is scaled so that the texture is invisible.
+A scale_amt value greater than one will scale the texture to a greater size.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.set_vflip">
+<tt class="descname">set_vflip</tt><big>(</big><em>val</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.set_vflip" title="Permalink to this definition">¶</a></dt>
+<dd><p>val is True or False that determines if we should vertically flip the surface or not.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Sprite.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.Sprite.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the sprite and its nodes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Sprite.v_flip">
+<tt class="descname">v_flip</tt><a class="headerlink" href="#Ragnarok.Sprite.v_flip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.SpriteSheet">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">SpriteSheet</tt><a class="headerlink" href="#Ragnarok.SpriteSheet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.Sprite" title="Ragnarok.Sprite"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.Sprite</span></tt></a></p>
+<dl class="attribute">
+<dt id="Ragnarok.SpriteSheet.cell_height">
+<tt class="descname">cell_height</tt><a class="headerlink" href="#Ragnarok.SpriteSheet.cell_height" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.SpriteSheet.cell_width">
+<tt class="descname">cell_width</tt><a class="headerlink" href="#Ragnarok.SpriteSheet.cell_width" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.SpriteSheet.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em>, <em>cell</em><big>)</big><a class="headerlink" href="#Ragnarok.SpriteSheet.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw out the specified cell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.SpriteSheet.load_texture">
+<tt class="descname">load_texture</tt><big>(</big><em>file_path</em>, <em>cell_size=(256</em>, <em>256)</em><big>)</big><a class="headerlink" href="#Ragnarok.SpriteSheet.load_texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a spritesheet texture.
+cell_size is the uniform size of each cell in the spritesheet.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.Text">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Text</tt><big>(</big><em>update_order=0</em>, <em>draw_order=0</em>, <em>font_path=''</em>, <em>font_size=0</em>, <em>color=(0</em>, <em>0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#Ragnarok.Text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<dl class="attribute">
+<dt id="Ragnarok.Text.color">
+<tt class="descname">color</tt><a class="headerlink" href="#Ragnarok.Text.color" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Text.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em><big>)</big><a class="headerlink" href="#Ragnarok.Text.draw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Text.font_size">
+<tt class="descname">font_size</tt><a class="headerlink" href="#Ragnarok.Text.font_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the current size of the font.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Text.load_font">
+<tt class="descname">load_font</tt><big>(</big><em>font_path</em>, <em>font_size</em><big>)</big><a class="headerlink" href="#Ragnarok.Text.load_font" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the specified font from a file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Text.rotation">
+<tt class="descname">rotation</tt><a class="headerlink" href="#Ragnarok.Text.rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the scale of the font.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Text.scale">
+<tt class="descname">scale</tt><a class="headerlink" href="#Ragnarok.Text.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the scale of the font.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.Text.text">
+<tt class="descname">text</tt><a class="headerlink" href="#Ragnarok.Text.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the text that is currently displaying.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Text.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.Text.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.Tile">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Tile</tt><big>(</big><em>binding_type=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#Ragnarok.Tile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.Tile.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em><big>)</big><a class="headerlink" href="#Ragnarok.Tile.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw the image to the specified surface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Tile.generate_bbox">
+<tt class="descname">generate_bbox</tt><big>(</big><em>collision_function=None</em>, <em>tag=''</em><big>)</big><a class="headerlink" href="#Ragnarok.Tile.generate_bbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a bounding box around this tile so that it can collide with objects not included in the TileManager</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.TileMap">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">TileMap</tt><big>(</big><em>spritesheet</em>, <em>tile_bindings</em>, <em>tile_map</em>, <em>collision_map</em>, <em>object_map</em>, <em>object_ary</em>, <em>level_name</em><big>)</big><a class="headerlink" href="#Ragnarok.TileMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.DrawableObj" title="Ragnarok.DrawableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.DrawableObj</span></tt></a></p>
+<dl class="method">
+<dt id="Ragnarok.TileMap.clamp_within_range">
+<tt class="descname">clamp_within_range</tt><big>(</big><em>x</em>, <em>y</em><big>)</big><a class="headerlink" href="#Ragnarok.TileMap.clamp_within_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp x and y so that they fall within range of the tilemap.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.TileMap.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em>, <em>surface</em><big>)</big><a class="headerlink" href="#Ragnarok.TileMap.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw out the tilemap.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.TileMap.grab_collisions">
+<tt class="descname">grab_collisions</tt><big>(</big><em>coords</em><big>)</big><a class="headerlink" href="#Ragnarok.TileMap.grab_collisions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all the tiles the position is colliding with.
+Tiles returned in this order:</p>
+<blockquote>
+<div>Top Left
+Top Right
+Bottom Left
+Bottom Right</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.TileMap.is_valid_tile">
+<tt class="descname">is_valid_tile</tt><big>(</big><em>x</em>, <em>y</em><big>)</big><a class="headerlink" href="#Ragnarok.TileMap.is_valid_tile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if the requested tile is part of the tile map.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.TileMap.parse_collisions">
+<tt class="descname">parse_collisions</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.TileMap.parse_collisions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the collision map and sets the tile states as necessary.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.TileMap.parse_objects">
+<tt class="descname">parse_objects</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.TileMap.parse_objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.TileMap.parse_tilemap">
+<tt class="descname">parse_tilemap</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.TileMap.parse_tilemap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.TileMap.pixels_to_tiles">
+<tt class="descname">pixels_to_tiles</tt><big>(</big><em>coords</em>, <em>clamp=True</em><big>)</big><a class="headerlink" href="#Ragnarok.TileMap.pixels_to_tiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert pixel coordinates into tile coordinates.
+clamp determines if we should clamp the tiles to ones only on the tilemap.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.TileMap.tiles_to_pixels">
+<tt class="descname">tiles_to_pixels</tt><big>(</big><em>tiles</em><big>)</big><a class="headerlink" href="#Ragnarok.TileMap.tiles_to_pixels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert tile coordinates into pixel coordinates</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="Ragnarok.TileMapManager">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">TileMapManager</tt><a class="headerlink" href="#Ragnarok.TileMapManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages our various tile maps.
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Manages our various tile maps.
 Allows us to load and unload maps.</p>
+<dl class="attribute">
+<dt id="Ragnarok.TileMapManager.active_map">
+<tt class="descname">active_map</tt><em class="property"> = None</em><a class="headerlink" href="#Ragnarok.TileMapManager.active_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="staticmethod">
 <dt id="Ragnarok.TileMapManager.add_map">
 <em class="property">static </em><tt class="descname">add_map</tt><big>(</big><em>mapObj</em><big>)</big><a class="headerlink" href="#Ragnarok.TileMapManager.add_map" title="Permalink to this definition">¶</a></dt>
@@ -353,20 +1164,147 @@ Allows us to load and unload maps.</p>
 <dl class="class">
 <dt id="Ragnarok.TileMapObject">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">TileMapObject</tt><big>(</big><em>tileMap</em><big>)</big><a class="headerlink" href="#Ragnarok.TileMapObject" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents an object to be placed in the tile map.</p>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.Sprite" title="Ragnarok.Sprite"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.Sprite</span></tt></a></p>
+<p>Represents an object to be placed in the tile map.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.Timer">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Timer</tt><big>(</big><em>alarm_time=0.0</em><big>)</big><a class="headerlink" href="#Ragnarok.Timer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.UpdatableObj" title="Ragnarok.UpdatableObj"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.UpdatableObj</span></tt></a></p>
+<dl class="attribute">
+<dt id="Ragnarok.Timer.current_time">
+<tt class="descname">current_time</tt><a class="headerlink" href="#Ragnarok.Timer.current_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current time that the timer is at.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Timer.get_current_time">
+<tt class="descname">get_current_time</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Timer.get_current_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current time that the timer is at.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Timer.is_ringing">
+<tt class="descname">is_ringing</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Timer.is_ringing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the timer ringing?</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Timer.reset">
+<tt class="descname">reset</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Timer.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the time inside of the timer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Timer.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.Timer.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="Ragnarok.UpdatableObj">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">UpdatableObj</tt><big>(</big><em>update_order=0</em><big>)</big><a class="headerlink" href="#Ragnarok.UpdatableObj" title="Permalink to this definition">¶</a></dt>
-<dd><p>The base class of our game engine.
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>The base class of our game engine.
 Represents an object that can be updated.</p>
+<dl class="method">
+<dt id="Ragnarok.UpdatableObj.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.UpdatableObj.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.Vector2">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Vector2</tt><big>(</big><em>X=0.0</em>, <em>Y=0.0</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dl class="method">
+<dt id="Ragnarok.Vector2.angle">
+<tt class="descname">angle</tt><big>(</big><em>vec1</em>, <em>vec2</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the angle between two Vector2&#8217;s</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Vector2.component_div">
+<em class="property">static </em><tt class="descname">component_div</tt><big>(</big><em>vec1</em>, <em>vec2</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.component_div" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divide the components of the vectors and return the result.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Vector2.component_mul">
+<em class="property">static </em><tt class="descname">component_mul</tt><big>(</big><em>vec1</em>, <em>vec2</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.component_mul" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiply the components of the vectors and return the result.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Vector2.copy">
+<tt class="descname">copy</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a copy of this Vector</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Vector2.distance">
+<em class="property">static </em><tt class="descname">distance</tt><big>(</big><em>vec1</em>, <em>vec2</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the distance between two Vectors</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Vector2.dot">
+<em class="property">static </em><tt class="descname">dot</tt><big>(</big><em>vec1</em>, <em>vec2</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.dot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the dot product between two Vectors</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Vector2.from_polar">
+<em class="property">static </em><tt class="descname">from_polar</tt><big>(</big><em>degrees</em>, <em>magnitude</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.from_polar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert polar coordinates to Carteasian Coordinates</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Vector2.length">
+<tt class="descname">length</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the length of this Vector</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Vector2.lerp">
+<em class="property">static </em><tt class="descname">lerp</tt><big>(</big><em>vec1</em>, <em>vec2</em>, <em>time</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.lerp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lerp between vec1 to vec2 based on time. Time is clamped between 0 and 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Vector2.normalize">
+<tt class="descname">normalize</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.normalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the normalized Vector</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.Vector2.normalize_copy">
+<tt class="descname">normalize_copy</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.normalize_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a copy of this Vector, normalize it, and return it.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Vector2.one">
+<em class="property">static </em><tt class="descname">one</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.one" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Vector2 with all attribures set to 1</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Ragnarok.Vector2.zero">
+<em class="property">static </em><tt class="descname">zero</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.Vector2.zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Vector2 with all attributes set to 0</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="Ragnarok.Vector3">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Vector3</tt><big>(</big><em>x=0.0</em>, <em>y=0.0</em>, <em>z=0.0</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector3" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides basic 3D Vector operations</p>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Provides basic 3D Vector operations</p>
 <dl class="method">
 <dt id="Ragnarok.Vector3.clamp">
 <tt class="descname">clamp</tt><big>(</big><em>clampVal</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector3.clamp" title="Permalink to this definition">¶</a></dt>
@@ -426,7 +1364,8 @@ Represents an object that can be updated.</p>
 <dl class="class">
 <dt id="Ragnarok.Vector4">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Vector4</tt><big>(</big><em>x=0.0</em>, <em>y=0.0</em>, <em>z=0.0</em>, <em>w=0.0</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector4" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides basic 3D Vector operations</p>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Provides basic 3D Vector operations</p>
 <dl class="method">
 <dt id="Ragnarok.Vector4.clamp">
 <tt class="descname">clamp</tt><big>(</big><em>clampVal</em><big>)</big><a class="headerlink" href="#Ragnarok.Vector4.clamp" title="Permalink to this definition">¶</a></dt>
@@ -480,11 +1419,106 @@ Represents an object that can be updated.</p>
 <dl class="class">
 <dt id="Ragnarok.Warp">
 <em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">Warp</tt><big>(</big><em>map_association</em><big>)</big><a class="headerlink" href="#Ragnarok.Warp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows the player to warp to a different level or to a different location on the current level.</p>
+<dd><p>Bases: <a class="reference internal" href="#Ragnarok.Sprite" title="Ragnarok.Sprite"><tt class="xref py py-class docutils literal"><span class="pre">Ragnarok.Sprite</span></tt></a></p>
+<p>Allows the player to warp to a different level or to a different location on the current level.</p>
 <dl class="method">
 <dt id="Ragnarok.Warp.warp_object">
 <tt class="descname">warp_object</tt><big>(</big><em>tileMapObj</em><big>)</big><a class="headerlink" href="#Ragnarok.Warp.warp_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warp the tile map object from one warp to another.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Ragnarok.World">
+<em class="property">class </em><tt class="descclassname">Ragnarok.</tt><tt class="descname">World</tt><a class="headerlink" href="#Ragnarok.World" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dl class="method">
+<dt id="Ragnarok.World.add_obj">
+<tt class="descname">add_obj</tt><big>(</big><em>obj</em><big>)</big><a class="headerlink" href="#Ragnarok.World.add_obj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Ragnarok.World.backbuffer">
+<tt class="descname">backbuffer</tt><a class="headerlink" href="#Ragnarok.World.backbuffer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.clear_backbuffer">
+<tt class="descname">clear_backbuffer</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.World.clear_backbuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the backbuffer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.draw">
+<tt class="descname">draw</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.World.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws all of the objects in our world.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.find_obj_by_tag">
+<tt class="descname">find_obj_by_tag</tt><big>(</big><em>tag</em><big>)</big><a class="headerlink" href="#Ragnarok.World.find_obj_by_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search through all the objects in the world and return the first instance whose tag matches the specified string.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.get_backbuffer">
+<tt class="descname">get_backbuffer</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.World.get_backbuffer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.get_backbuffer_size">
+<tt class="descname">get_backbuffer_size</tt><big>(</big><big>)</big><a class="headerlink" href="#Ragnarok.World.get_backbuffer_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the width and height of the backbuffer as a Vector2.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.pixel_to_screen">
+<tt class="descname">pixel_to_screen</tt><big>(</big><em>pixelPos</em><big>)</big><a class="headerlink" href="#Ragnarok.World.pixel_to_screen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize a pixel position into [0, 0] through [1, 1] coordinates.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.remove_all">
+<tt class="descname">remove_all</tt><big>(</big><em>tag</em><big>)</big><a class="headerlink" href="#Ragnarok.World.remove_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all objects with the specified tag from the world.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.remove_by_tag">
+<tt class="descname">remove_by_tag</tt><big>(</big><em>tag</em><big>)</big><a class="headerlink" href="#Ragnarok.World.remove_by_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the first encountered object with the specified tag from the world.
+Returns true if an object was found and removed.
+Returns false if no object could be removed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.remove_obj">
+<tt class="descname">remove_obj</tt><big>(</big><em>obj</em><big>)</big><a class="headerlink" href="#Ragnarok.World.remove_obj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.screen_to_pixel">
+<tt class="descname">screen_to_pixel</tt><big>(</big><em>screenPos</em><big>)</big><a class="headerlink" href="#Ragnarok.World.screen_to_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert [0, 0] - [1, 1] screen coords into pixel coordinates.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.set_backbuffer">
+<tt class="descname">set_backbuffer</tt><big>(</big><em>preferred_backbuffer_size</em>, <em>flags=0</em><big>)</big><a class="headerlink" href="#Ragnarok.World.set_backbuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the backbuffer for the game.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.set_display_at_native_res">
+<tt class="descname">set_display_at_native_res</tt><big>(</big><em>should_be_fullscreen=True</em><big>)</big><a class="headerlink" href="#Ragnarok.World.set_display_at_native_res" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the resolution to the display&#8217;s native resolution. Sets as fullscreen if should_be_fullscreen is true.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Ragnarok.World.update">
+<tt class="descname">update</tt><big>(</big><em>milliseconds</em><big>)</big><a class="headerlink" href="#Ragnarok.World.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates all of the objects in our world.</p>
 </dd></dl>
 
 </dd></dl>
@@ -532,6 +1566,10 @@ Represents an object that can be updated.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="members-that-need-documentation">
+<h2>Members that need documentation!<a class="headerlink" href="#members-that-need-documentation" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
@@ -549,7 +1587,11 @@ Represents an object that can be updated.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Welcome to RagnarokPy3.2&#8217;s documentation!</a></li>
+<li><a class="reference internal" href="#">Welcome to RagnarokPy3.2&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#module-Ragnarok">Ragnarok.py Documentation</a></li>
+<li><a class="reference internal" href="#members-that-need-documentation">Members that need documentation!</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 
@@ -589,6 +1631,7 @@ Represents an object that can be updated.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2012, David Salter.
+      Last updated on Sep 12, 2012.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>
